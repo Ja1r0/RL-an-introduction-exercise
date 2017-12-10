@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 # sortd(l,key=lambda x:x[1])
 # max(l,key=lambda x:x[1])
 # 这同样适用于元组为namedtuple时
+# getattr(object,'attribute_name')函数可以获得一个对象的属性或方法
 class env:
     def __init__(self, arms_num):
         self.arms = []
@@ -61,66 +62,46 @@ def play(max_steps=1000, tasks_num=2000):
     for i in range(tasks_num):
         task = single_task(env(10), agent(0, 10), agent(0.1, 10), agent(0.01, 10))
         tasks.append(task)
-    agent0_right_percent = []
-    agent01_right_percent = []
-    agent001_right_percent = []
-    for step in range(1, max_steps + 1):
-        if_optimal_arm_agent0 = []
-        if_optimal_arm_agent01 = []
-        if_optimal_arm_agent001 = []
-        for task in tasks:
-            ### agent0 ###
-            arm_idx = task.agent0.action()
-            reward = task.env.step(arm_idx)
-            task.agent0.update_memory(arm_idx, reward)
-            if arm_idx == task.env.optimal_arm_idx:
-                if_optimal_arm_agent0.append(1)
-            else:
-                if_optimal_arm_agent0.append(0)
-            ### agent01 ###
-            arm_idx = task.agent01.action()
-            reward = task.env.step(arm_idx)
-            task.agent01.update_memory(arm_idx, reward)
-            if arm_idx == task.env.optimal_arm_idx:
-                if_optimal_arm_agent01.append(1)
-            else:
-                if_optimal_arm_agent01.append(0)
-            ### agent001 ###
-            arm_idx = task.agent001.action()
-            reward = task.env.step(arm_idx)
-            task.agent001.update_memory(arm_idx, reward)
-            if arm_idx == task.env.optimal_arm_idx:
-                if_optimal_arm_agent001.append(1)
-            else:
-                if_optimal_arm_agent001.append(0)
+    agent_data_contain=namedtuple('agent_data_contain',['average_reward','right_percent'])
+    agents_data=[]
+    agent_names=['agent0','agent01','agent001']
+    for i in range(3):
+        agent_name=agent_names[i]
+        agent_right_percent = []        
+        for step in range(1, max_steps + 1):
+            if_optimal_arm = []           
+            for task in tasks:
+                ### agent ###
+                arm_idx = getattr(task,agent_name).action()
+                reward = task.env.step(arm_idx)
+                getattr(task,agent_name).update_memory(arm_idx, reward)
+                if arm_idx == task.env.optimal_arm_idx:
+                    if_optimal_arm.append(1)
+                else:
+                    if_optimal_arm.append(0)             
                 ######
-        agent0_right_percent.append(if_optimal_arm_agent0.count(1) / tasks_num)
-        agent01_right_percent.append(if_optimal_arm_agent01.count(1) / tasks_num)
-        agent001_right_percent.append(if_optimal_arm_agent001.count(1) / tasks_num)
-    agent0_reward_list = np.zeros(max_steps)
-    agent01_reward_list = np.zeros(max_steps)
-    agent001_reward_list = np.zeros(max_steps)
-    for task in tasks:
-        agent0_reward_list += np.array(task.agent0.reward_list)
-        agent01_reward_list += np.array(task.agent01.reward_list)
-        agent001_reward_list += np.array(task.agent001.reward_list)
-    agent0_average_reward = agent0_reward_list / tasks_num
-    agent01_average_reward = agent01_reward_list / tasks_num
-    agent001_average_reward = agent001_reward_list / tasks_num
+            agent_right_percent.append(if_optimal_arm.count(1) / tasks_num            
+        agent_reward_list = np.zeros(max_steps)     
+        for task in tasks:
+            agent_reward_list += np.array(getattr(task,agent_name).reward_list)         
+        agent_average_reward = agent_reward_list / tasks_num
+        agents_data.append(agent_data_contain(agent_average_reward,agent_right_percent))
+    
+    
     plt.figure(1)
     plt.subplot(2, 1, 1)
     plt.xlabel('Steps')
     plt.ylabel('Average reward')
-    plt.plot(agent01_average_reward, 'r', label='$\epsilon=0.1$')
-    plt.plot(agent001_average_reward, 'g', label='$\epsilon=0.01$')
-    plt.plot(agent0_average_reward, 'b', label='$\epsilon=0$(greedy)')
+    plt.plot(agents_data[1].average_reward, 'r', label='$\epsilon=0.1$')
+    plt.plot(agents_data[2].average_reward, 'g', label='$\epsilon=0.01$')
+    plt.plot(agents_data[0].average_reward, 'b', label='$\epsilon=0$(greedy)')
     plt.legend()
     plt.subplot(2, 1, 2)
     plt.xlabel('Steps')
     plt.ylabel('Optimal action')
-    plt.plot(agent01_right_percent, 'r', label='$\epsilon=0.1$')
-    plt.plot(agent001_right_percent, 'g', label='$\epsilon=0.01$')
-    plt.plot(agent0_right_percent, 'b', label='$\epsilon=0$(greedy)')
+    plt.plot(agents_data[1].right_percent, 'r', label='$\epsilon=0.1$')
+    plt.plot(agents_data[2].right_percent, 'g', label='$\epsilon=0.01$')
+    plt.plot(agents_data[0].right_percent, 'b', label='$\epsilon=0$(greedy)')
     plt.legend()
 
     plt.show()
