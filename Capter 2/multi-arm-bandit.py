@@ -92,7 +92,7 @@ def play(max_steps=1000, tasks_num=2000):
     plt.xlabel("Action")
     plt.ylabel("Reward distribution")
     plt.legend()
-    plt.show()
+    
     #figure 2.2
     plt.figure(22)
     plt.subplot(2, 1, 1)
