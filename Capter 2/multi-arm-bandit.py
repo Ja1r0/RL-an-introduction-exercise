@@ -91,6 +91,7 @@ def play(max_steps=1000, tasks_num=2000):
     sns.violinplot(data=np.random.randn(20000,10)+np.random.randn(10))
     plt.xlabel("Action")
     plt.ylabel("Reward distribution")
+    plt.legend()
     plt.show()
     #figure 2.2
     plt.figure(22)
