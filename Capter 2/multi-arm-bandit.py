@@ -80,7 +80,7 @@ def play(max_steps=1000, tasks_num=2000):
                 else:
                     if_optimal_arm.append(0)             
                 ######
-            agent_right_percent.append(if_optimal_arm.count(1) / tasks_num            
+            agent_right_percent.append(if_optimal_arm.count(1) / tasks_num)            
         agent_reward_list = np.zeros(max_steps)     
         for task in tasks:
             agent_reward_list += np.array(getattr(task,agent_name).reward_list)         
