@@ -2,7 +2,7 @@ import random
 from collections import namedtuple
 import numpy as np
 import matplotlib.pyplot as plt
-
+import seaborn as sns
 
 # 对元组的列表进行排序时，默认依据元组中的第一个元素，若想依据第二个元素，可以写为：
 # l=[(a,b),(),()]
@@ -86,9 +86,14 @@ def play(max_steps=1000, tasks_num=2000):
             agent_reward_list += np.array(getattr(task,agent_name).reward_list)         
         agent_average_reward = agent_reward_list / tasks_num
         agents_data.append(agent_data_contain(agent_average_reward,agent_right_percent))
-    
-    
-    plt.figure(1)
+    #figure 2.1
+    plt.figure(21)
+    sns.violinplot(data=np.random.randn(20000,10)+np.random.randn(10))
+    plt.xlabel("Action")
+    plt.ylabel("Reward distribution")
+    plt.show()
+    #figure 2.2
+    plt.figure(22)
     plt.subplot(2, 1, 1)
     plt.xlabel('Steps')
     plt.ylabel('Average reward')
@@ -103,7 +108,7 @@ def play(max_steps=1000, tasks_num=2000):
     plt.plot(agents_data[2].right_percent, 'g', label='$\epsilon=0.01$')
     plt.plot(agents_data[0].right_percent, 'b', label='$\epsilon=0$(greedy)')
     plt.legend()
-
+    
     plt.show()
 
 
