@@ -81,7 +81,7 @@ def figure_2_3(max_steps=1000, task_num=2000,random_walk_std=0.5):
                     optim_count += 1
                 ### in nonstationary cases ,reset the env ###
                 ### make the Q of arms random walk ###
-                env.reset(random_walk_std)
+                #env.reset(random_walk_std)
             optim_percent.append(optim_count / task_num)
         for single_task in tasks:
             player=single_task[i]
