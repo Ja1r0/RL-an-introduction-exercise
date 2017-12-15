@@ -5,15 +5,13 @@ import numpy as np
 class bandit:
     def __init__(self, arm_num):
         self.arms = []
-        mean = random.gauss(0, 1)
         for _ in range(arm_num):
-
-            arm = {'mean': mean, 'std': 1}
+            arm = {'mean': random.gauss(0, 1), 'std': 1}
             self.arms.append(arm)
 
-    def reset(self):
+    def reset(self,random_walk_std):
         for i in range(len(self.arms)):
-            self.arms[i]['mean'] = random.gauss(0, 1)
+            self.arms[i]['mean'] += random.gauss(0, random_walk_std)
 
     def step(self, arm_idx):
         mean = self.arms[arm_idx]['mean']
@@ -35,6 +33,7 @@ class agent:
             self.memory.append(arm_info)
         self.alpha_type=alpha_type
         self.reward_list=[]
+
     def update_memory(self, arm_idx, reward):
         Q = self.memory[arm_idx]['Q']
         visits = self.memory[arm_idx]['visits'] + 1
@@ -44,7 +43,6 @@ class agent:
         elif self.alpha_type == 'constant':
             alpha = 0.1
         Q_new = Q + alpha * (reward - Q)
-
         self.memory[arm_idx]['Q'] = Q_new
         self.memory[arm_idx]['visits'] = visits
         self.reward_list.append(reward)
@@ -58,21 +56,16 @@ class agent:
             arm_idx = self.memory.index(item)
         return arm_idx
 
-
-def exercise2_3(max_steps=1000, task_num=2000, greedy=0.1):
-
-
+def exercise2_3(max_steps=1000, task_num=2000, greedy=0.1,random_walk_std=0.5):
     tasks = []
     for _ in range(task_num):
         task = bandit(10)
         agent0 = agent(greedy, 10, 'sample-average')
         agent1 = agent(greedy, 10, 'constant')
-        #task.reset()
         tasks.append([task,agent0,agent1])
     graph1 = []
     graph2 = []
     for i in range(1,3):
-
         optim_percent = []
         total_reward = np.zeros(max_steps)
         for step in range(1, max_steps + 1):
@@ -86,10 +79,8 @@ def exercise2_3(max_steps=1000, task_num=2000, greedy=0.1):
                 optim_idx=env.optim_idx()
                 if arm_idx == optim_idx:
                     optim_count += 1
-                env.reset()
-
+                env.reset(random_walk_std)
             optim_percent.append(optim_count / task_num)
-
         for single_task in tasks:
             player=single_task[i]
             total_reward+=np.array(player.reward_list)
@@ -111,7 +102,6 @@ def exercise2_3(max_steps=1000, task_num=2000, greedy=0.1):
     plt.legend()
     plt.show()
 
-
 if __name__ == '__main__':
-
-    exercise2_3(max_steps=1000, task_num=2000, greedy=0.1)
+    # random walk : q=q+e , e~N(0,std)
+    exercise2_3(max_steps=1000, task_num=2000, greedy=0.1,random_walk_std=0.5)
