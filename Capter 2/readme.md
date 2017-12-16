@@ -10,3 +10,5 @@
 ![exercise 2.3](./figure/f2-3.png)
 #### nonstationary case
 ![exercise 2.3](./figure/f2-3(nonstationary).png)
+### figure 2.4
+![figure 2.4](./figure/f2-4.png)
