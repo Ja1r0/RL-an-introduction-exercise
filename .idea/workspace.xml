@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04d53353-ee37-45f3-9f71-27b41c0be997" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Capter 2/figure/Figure 2-4.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Capter 2/Figure 2-5.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +29,8 @@
       <file leaf-file-name="Figure 2-1 2-2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Capter 2/Figure 2-1 2-2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2034">
-              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="92" column="26" lean-forward="true" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Figure 2-4.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Capter 2/figure/Figure 2-4.py">
+      <file leaf-file-name="Figure 2-5.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Capter 2/Figure 2-5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+            <state relative-caret-position="216">
+              <caret line="129" column="54" lean-forward="false" selection-start-line="129" selection-start-column="54" selection-end-line="129" selection-end-column="54" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -80,13 +80,14 @@
         <option value="$PROJECT_DIR$/Capter 2/Exercise 2-3.py" />
         <option value="$PROJECT_DIR$/Capter 2/Figure 2-3.py" />
         <option value="$PROJECT_DIR$/Capter 2/figure/Figure 2-4.py" />
+        <option value="$PROJECT_DIR$/Capter 2/Figure 2-5.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="214" />
-    <option name="y" value="24" />
-    <option name="width" value="1118" />
+    <option name="x" value="354" />
+    <option name="y" value="48" />
+    <option name="width" value="1348" />
     <option name="height" value="993" />
   </component>
   <component name="ProjectView">
@@ -104,7 +105,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -118,16 +118,11 @@
               <item name="RL-an-introduction-exercise" type="462c0819:PsiDirectoryNode" />
               <item name="Capter 2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="RL-an-introduction-exercise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-an-introduction-exercise" type="462c0819:PsiDirectoryNode" />
-              <item name="Capter 2" type="462c0819:PsiDirectoryNode" />
-              <item name="figure" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,7 +140,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Figure 2-4">
+  <component name="RunManager" selected="Python.Figure 2-5">
     <configuration name="Exercise 2-3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -214,18 +209,37 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="4">
+    <configuration name="Figure 2-5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Capter 2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RL-an-introduction-exercise" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Capter 2/Figure 2-5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Exercise 2-3" />
       <item index="1" class="java.lang.String" itemvalue="Python.Figure 2-1 2-2" />
       <item index="2" class="java.lang.String" itemvalue="Python.Figure 2-3" />
       <item index="3" class="java.lang.String" itemvalue="Python.Figure 2-4" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Figure 2-5" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.Figure 2-4" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Figure 2-3" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Figure 2-1 2-2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Exercise 2-3" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.Figure 2-5" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Figure 2-4" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Figure 2-3" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Figure 2-1 2-2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Exercise 2-3" />
       </list>
     </recent_temporary>
   </component>
@@ -243,10 +257,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="214" y="24" width="1118" height="993" extended-state="0" />
+    <frame x="354" y="48" width="1348" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25466418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21351767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329849" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -287,6 +301,36 @@
     <entry file="file://$PROJECT_DIR$/Capter 2/Figure 2-1 2-2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2034">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Capter 2/Figure 2-3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1476">
+          <caret line="82" column="11" lean-forward="false" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Capter 2/Exercise 2-3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="105" column="38" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Capter 2/Figure 2-1 2-2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2034">
           <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -314,16 +358,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Capter 2/Figure 2-1 2-2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2034">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Capter 2/figure/Figure 2-4.py" />
     <entry file="file://$PROJECT_DIR$/Capter 2/Figure 2-3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -334,10 +369,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Capter 2/figure/Figure 2-4.py">
+    <entry file="file://$PROJECT_DIR$/Capter 2/Figure 2-1 2-2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+        <state relative-caret-position="108">
+          <caret line="92" column="26" lean-forward="true" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Capter 2/Figure 2-5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="129" column="54" lean-forward="false" selection-start-line="129" selection-start-column="54" selection-end-line="129" selection-end-column="54" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
